@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types';
 import React from 'react';
 import '../styles/Bookcard.css';
 
@@ -23,7 +23,7 @@ export default function Bookcard({ title, author }) {
       </div>
     </div>
   );
-};
+}
 
 Bookcard.propTypes = {
   author: PropTypes.string.isRequired,

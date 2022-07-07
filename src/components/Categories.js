@@ -5,7 +5,7 @@ export default function Categories() {
   return (
     <div>
       <Header />
-      <h2>Categories Page</h2>
+      <button>Check status</button>
     </div>
   )
 }

@@ -1,0 +1,22 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 28px;
+}
+
+.Nav-link {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.Nav-link li {
+  margin-left: 24px;
+}
+
+.Avater {
+  margin-left: auto;
+  color: rebeccapurple;
+}

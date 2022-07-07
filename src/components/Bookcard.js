@@ -15,11 +15,11 @@ export default function Bookcard({title, author}) {
         </div>
       </div>
       <div>Reading Progress</div>
-      <div className='Chapter-info'>
+      <div className="Chapter-info">
         <p>Current Chapter</p>
         <h3>Chapter 3: A leason learned</h3>
         <button>Update Progress</button>
       </div>
     </div>
-  )
+  );
 }

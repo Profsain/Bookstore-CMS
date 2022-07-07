@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Form() {
   return (
@@ -7,8 +7,8 @@ export default function Form() {
       <form>
         <input type="text" placeholder="Book Title" />
         <input type="text" placeholder="Author" />
-        <button>Add Book</button>
+        <button type="button">Add Book</button>
       </form>
     </div>
-  )
+  );
 }

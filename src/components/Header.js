@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Header.css'
+import '../styles/Header.css';
 
 export default function Header() {
   return (
-    <header className='Header'>
+    <header className="Header">
       <h3 className="Brand-text">Bookstore CMS</h3>
       <nav className="Navbar">
         <ul className="Nav-link">

@@ -1,0 +1,4 @@
+.Book-card {
+  display: grid;
+  grid-template-columns: auto 300px 300px;
+}

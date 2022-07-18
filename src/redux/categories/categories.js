@@ -5,10 +5,7 @@ const BOOKSTATUS = 'CHECKSTATUS';
 const checkBookStatusReducer = (bookStatus = [], action) => {
   switch (action.type) {
     case BOOKSTATUS:
-      return [
-        ...bookStatus,
-        action.bookStatus,
-      ];
+      return 'Under construction';
     default:
       return bookStatus;
   }

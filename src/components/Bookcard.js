@@ -6,9 +6,9 @@ import '../styles/Bookcard.css';
 
 export default function Bookcard({ title, author }) {
   const dispatch = useDispatch();
-  const removeBookHandler = (event) => {
-    dispatch(removeBook())
-  }
+  const removeBookHandler = () => {
+    dispatch(removeBook());
+  };
 
   return (
     <div className="Book-card">

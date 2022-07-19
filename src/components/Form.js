@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
 import uniqid from 'uniqid';
 import { addBook } from '../redux/books/books';
 
 export default function Form() {
   const dispatch = useDispatch();
-  const [book, setBook] = useState({ title: '', author: '', });
+  const [book, setBook] = useState({ title: '', author: '' });
   // input field handler
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -14,22 +13,22 @@ export default function Form() {
       ...prevBook,
       [name]: value,
     }));
-  }
+  };
 
   // add new book method
   const addNewBook = () => {
-    let newBook = {
+    const newBook = {
       ...book,
       id: uniqid(),
     };
-    dispatch(addBook({...newBook}));
+    dispatch(addBook({ ...newBook  }));
 
     setBook((prevBook) => ({
       ...prevBook,
       title: '',
       author: '',
     }));
-  }
+  };
 
   return (
     <div className="Form-container">

@@ -39,7 +39,7 @@ const bookReducer = (books = booksArr, action) => {
         },
       ];
     case REMOVEBOOK:
-      return books.filter((book) => book.id !== action.id)
+      return books.filter((book) => book.id !== action.id);
     default:
       return books;
   }

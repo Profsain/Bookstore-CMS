@@ -21,7 +21,7 @@ export default function Form() {
       ...book,
       id: uniqid(),
     };
-    dispatch(addBook({ ...newBook  }));
+    dispatch(addBook({ ...newBook }));
 
     setBook((prevBook) => ({
       ...prevBook,

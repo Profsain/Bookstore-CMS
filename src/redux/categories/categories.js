@@ -12,10 +12,9 @@ const checkBookStatusReducer = (bookStatus = [], action) => {
 };
 
 // Action creators
-export const checkBookStatus = (bookStatus) => (
+export const checkBookStatus = () => (
   {
     type: BOOKSTATUS,
-    bookStatus,
   }
 );
 

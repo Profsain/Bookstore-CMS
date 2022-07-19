@@ -5,9 +5,11 @@ import checkBookStatusReducer from './categories/categories';
 
 const rootReducer = combineReducers({
   book: bookReducer,
-  status: checkBookStatusReducer,
+  bookStatus: checkBookStatusReducer,
 });
 
-const store = configureStore(rootReducer);
+const store = configureStore({
+  reducer: rootReducer,
+});
 
 export default store;

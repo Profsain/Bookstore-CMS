@@ -1,11 +1,18 @@
 import React from 'react';
-import Header from './Header';
+import { useSelector } from 'react-redux';
+import '../styles/Books.css';
 import Form from './Form';
+import Bookcard from './Bookcard';
 
 export default function Books() {
+  const books = useSelector((state) => state.book);
+  const bookList = books.map((book) => (
+    <Bookcard key={book.id} title={book.title} author={book.author} />
+  ));
+
   return (
-    <div>
-      <Header />
+    <div className='Container'>
+      {bookList}
       <button type="button">Remove</button>
       <Form />
     </div>

@@ -1,11 +1,18 @@
 import React from 'react';
-import Header from './Header';
+import { useDispatch } from 'react-redux';
+import { checkBookStatus } from '../redux/categories/categories';
 
 export default function Categories() {
+  const dispatch = useDispatch();
+
   return (
     <div>
-      <Header />
-      <button type="button">Check status</button>
+      <button
+        type="button"
+        onClick={() => dispatch(checkBookStatus())}
+      >
+        Check status
+      </button>
     </div>
   );
 }

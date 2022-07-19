@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 import '../styles/Bookcard.css';
 
 export default function Bookcard({ title, author }) {
+  const dispatch = useDispatch();
+  const removeBookHandler = (event) => {
+    dispatch(removeBook())
+  }
+
   return (
     <div className="Book-card">
       <div className="Book-info">
@@ -11,7 +18,12 @@ export default function Bookcard({ title, author }) {
         <p>{author}</p>
         <div className="Buttons">
           <button type="button">Comment</button>
-          <button type="button">Remove</button>
+          <button
+            type="button"
+            onClick={removeBookHandler}
+          >
+            Remove
+          </button>
           <button type="button">Edit</button>
         </div>
       </div>

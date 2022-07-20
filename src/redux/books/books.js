@@ -5,22 +5,22 @@ const REMOVEBOOK = 'REMOVEBOOK';
 // initial state
 const booksArr = [
   {
-    id: 123,
+    id: '123',
     title: 'JavaScript Like I am Five',
     author: 'Profsain Husseini',
   },
   {
-    id: 1231,
+    id: '1231',
     title: 'React Redux in 5 Steps',
     author: 'Eng. Mudi P.H',
   },
   {
-    id: 124,
+    id: '124',
     title: 'Life as a Programmer',
     author: 'John Watermelon',
   },
   {
-    id: 125,
+    id: '125',
     title: 'CSS Pro Like Bro',
     author: 'Joe Bidus',
   },
@@ -39,9 +39,7 @@ const bookReducer = (state = booksArr, action) => {
         },
       ];
     case REMOVEBOOK:
-      let bookId = parseInt(action.id)
-      let filterBook = state.filter((book) => parseInt(book.id) !== bookId);
-      return filterBook
+      return state.filter((book) => (book.id) !== action.id);
     default:
       return state;
   }

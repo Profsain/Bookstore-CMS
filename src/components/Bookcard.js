@@ -7,7 +7,7 @@ import '../styles/Bookcard.css';
 export default function Bookcard({ id, title, author }) {
   const dispatch = useDispatch();
   const removeBookHandler = (e) => {
-    let bookId = e.target.id;
+    const bookId = e.target.id;
     dispatch(removeBook(bookId));
   };
 
@@ -42,4 +42,5 @@ export default function Bookcard({ id, title, author }) {
 Bookcard.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 };

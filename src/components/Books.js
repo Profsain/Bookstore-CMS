@@ -6,8 +6,8 @@ import Bookcard from './Bookcard';
 
 export default function Books() {
   const books = useSelector((state) => state.book);
-  const bookList = books.map((book) => (
-    <Bookcard key={book.id} title={book.title} author={book.author} />
+  const bookList = books.map((book, i) => (
+    <Bookcard key={book.id} title={book.title} author={book.author} id={book.id}/>
   ));
 
   return (

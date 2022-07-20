@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import uniqid from 'uniqid';
 import { addBook } from '../redux/books/books';
 
 export default function Form() {
+  const generateUniqueId = require('generate-unique-id');
   const dispatch = useDispatch();
   const [book, setBook] = useState({ title: '', author: '' });
   // input field handler
@@ -17,9 +17,13 @@ export default function Form() {
 
   // add new book method
   const addNewBook = () => {
+    const uniqueId = generateUniqueId({
+      length: 8,
+      useLetters: false
+    });
     const newBook = {
       ...book,
-      id: uniqid(),
+      id: uniqueId,
     };
     dispatch(addBook({ ...newBook }));
 

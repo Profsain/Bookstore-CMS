@@ -27,11 +27,11 @@ const booksArr = [
 ];
 
 // Reducers
-const bookReducer = (books = booksArr, action) => {
+const bookReducer = (state = booksArr, action) => {
   switch (action.type) {
     case ADDBOOK:
       return [
-        ...books,
+        ...state,
         {
           id: action.id,
           title: action.title,
@@ -39,9 +39,11 @@ const bookReducer = (books = booksArr, action) => {
         },
       ];
     case REMOVEBOOK:
-      return books.filter((book) => book.id !== action.id);
+      let bookId = parseInt(action.id)
+      let filterBook = state.filter((book) => parseInt(book.id) !== bookId);
+      return filterBook
     default:
-      return books;
+      return state;
   }
 };
 // Action creators
@@ -55,7 +57,7 @@ export const addBook = (book) => (
 export const removeBook = (id) => (
   {
     type: REMOVEBOOK,
-    playload: id,
+    id,
   }
 );
 

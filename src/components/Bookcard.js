@@ -4,10 +4,11 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 import '../styles/Bookcard.css';
 
-export default function Bookcard({ title, author }) {
+export default function Bookcard({ id, title, author }) {
   const dispatch = useDispatch();
-  const removeBookHandler = () => {
-    dispatch(removeBook());
+  const removeBookHandler = (e) => {
+    let bookId = e.target.id;
+    dispatch(removeBook(bookId));
   };
 
   return (
@@ -19,6 +20,7 @@ export default function Bookcard({ title, author }) {
         <div className="Buttons">
           <button type="button">Comment</button>
           <button
+            id={id}
             type="button"
             onClick={removeBookHandler}
           >

@@ -42,5 +42,5 @@ export default function Bookcard({ id, title, author }) {
 Bookcard.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
 };

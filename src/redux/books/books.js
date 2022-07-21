@@ -53,7 +53,7 @@ const bookReducer = (state = initialState, action) => {
       return {
         ...state,
         error: action.payload.error,
-      }
+      };
     case DELETE_BOOK_BEGIN:
       return {
         ...state,
@@ -87,7 +87,7 @@ export const fetchBooksSuccess = (books) => ({
 
 export const fetchBooksError = (error) => ({
   type: FETCH_BOOKS_ERROR,
-  payload: { error }
+  payload: { error },
 });
 
 // Add book action creators
@@ -100,7 +100,7 @@ export const addBook = () => ({
 export const addBookError = (error) => ({
   type: ADD_BOOK_ERROR,
   payload: { error },
-})
+});
 
 // Delete book action creators
 export const deleteBookBegin = () => ({

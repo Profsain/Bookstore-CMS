@@ -1,5 +1,6 @@
+
 // redux thunk middleware to fetch data from api
-import { fetchBooksBegin, fetchBooksSuccess, fetchBooksError } from "./books";
+import { fetchBooksBegin, fetchBooksSuccess, fetchBooksError } from './books';
 
 const fetchBooksData = () => {
   const APP_KEY = 'LfwQMoB2y0EcfNVsTouw';
@@ -7,22 +8,14 @@ const fetchBooksData = () => {
   return (dispatch) => {
     dispatch(fetchBooksBegin());
     return fetch(url)
-      .then(handleError)
       .then((response) => response.json())
       .then((data) => {
         dispatch(fetchBooksSuccess(data));
         return data;
       })
-      .catch((error) => dispatch(fetchBooksError(error)));
+      .catch((error) => dispatch(fetchBooksError(error))
+      );
   };
-};
-
-// error handler for fetch api
-const handleError = (response) => {
-  if(!response.ok) {
-    throw Error(response.statusText);
-  }
-  return response
 };
 
 export default fetchBooksData;

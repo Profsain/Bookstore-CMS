@@ -8,10 +8,10 @@ const fetchBooksData = () => {
     dispatch(fetchBooksBegin());
     return fetch(url)
       .then(handleError)
-      .then((response) => response.json)
+      .then((response) => response.json())
       .then((data) => {
-        dispatch(fetchBooksSuccess(data.books));
-        return data.books;
+        dispatch(fetchBooksSuccess(data));
+        return data;
       })
       .catch((error) => dispatch(fetchBooksError(error)));
   };

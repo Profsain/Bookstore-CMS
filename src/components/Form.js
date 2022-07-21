@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import generateUniqueId from 'generate-unique-id';
 import { addBook } from '../redux/books/books';
+import addNewBookToApi from '../redux/books/addNewBookToApi';
 
 export default function Form() {
   const dispatch = useDispatch();
-  const [book, setBook] = useState({ title: '', author: '' });
+  const [book, setBook] = useState({ title: '', author: '', category: 'Programming' });
   // input field handler
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -17,15 +18,17 @@ export default function Form() {
 
   // add new book method
   const addNewBook = () => {
+    // generate unique id for new book
     const uniqueId = generateUniqueId({
       length: 8,
       useLetters: false,
     });
     const newBook = {
       ...book,
-      id: uniqueId,
+      item_id: uniqueId,
     };
-    dispatch(addBook({ ...newBook }));
+    console.log(newBook)
+    dispatch(addBook(addNewBookToApi(newBook)));
 
     setBook((prevBook) => ({
       ...prevBook,

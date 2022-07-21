@@ -1,4 +1,5 @@
 // Action
+
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const FETCH_BOOKS_BEGIN = 'FETCH_BOOKS_BEGIN';
@@ -58,21 +59,14 @@ const bookReducer = (state = initialState, action) => {
         books: [],
       };
     case ADD_BOOK:
-      return [
-        ...state,
-        {
-          id: action.id,
-          title: action.title,
-          author: action.author,
-        },
-      ];
+      return null
     case REMOVE_BOOK:
       return state.filter((book) => (book.id) !== action.id);
     default:
       return state;
   }
 };
-// Action creators
+// fetch books action creators
 export const fetchBooksBegin = () => ({
   type: FETCH_BOOKS_BEGIN,
 });
@@ -87,12 +81,11 @@ export const fetchBooksError = (error) => ({
   payload: { error }
 });
 
-export const addBook = (book) => (
-  {
-    type: ADD_BOOK,
-    ...book,
-  }
-);
+// Add book action creators
+export const addBook = (addBookFun) => ({
+  type: ADD_BOOK,
+  payload: addBookFun,
+});
 
 export const removeBook = (id) => (
   {

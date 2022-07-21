@@ -10,15 +10,13 @@ export default function Books() {
   useEffect(() => {
     dispatch(fetchBooksData());
   }, []);
-  const booksData = useSelector((state) => state.book);
-  console.log(booksData.books)
-  // const bookList = books.map((book) => (
-  //   <Bookcard key={book.id} title={book.title} author={book.author} id={book.id} />
-  // ));
+  const booksData = useSelector((state) => state.book.books);
 
   return (
     <div className="Container">
-      {/* {bookList} */}
+      {Object.entries(booksData).map(([key, value], i) =>
+        <Bookcard key={i} id={key} title={value[0].title} author={value[0].author} />
+      )}
       <Form />
     </div>
   );

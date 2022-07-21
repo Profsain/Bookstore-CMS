@@ -14,11 +14,12 @@ export default function Books() {
   return (
     <div className="Container">
       {Object.entries(booksData)
-        .map(([key, value]) => <Bookcard
-          key={key} id={key}
+        .map(([key, value]) => (<Bookcard
+          key={key}
+          id={key}
           title={value[0].title}
           author={value[0].author}
-        />)}
+        />))}
       <Form />
     </div>
   );

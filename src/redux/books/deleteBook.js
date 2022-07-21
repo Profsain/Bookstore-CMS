@@ -15,6 +15,6 @@ const deleteBookFromApi = (bookId) => {
       })
       .catch((error) => dispatch(deleteBookError(error)));
   };
-}
+};
 
 export default deleteBookFromApi;

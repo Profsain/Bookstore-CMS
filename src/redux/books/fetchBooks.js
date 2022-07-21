@@ -1,4 +1,3 @@
-
 // redux thunk middleware to fetch data from api
 import { fetchBooksBegin, fetchBooksSuccess, fetchBooksError } from './books';
 
@@ -13,8 +12,7 @@ const fetchBooksData = () => {
         dispatch(fetchBooksSuccess(data));
         return data;
       })
-      .catch((error) => dispatch(fetchBooksError(error))
-      );
+      .catch((error) => dispatch(fetchBooksError(error)));
   };
 };
 

@@ -6,10 +6,10 @@ import deleteBookFromApi from '../redux/books/deleteBook';
 import '../styles/Bookcard.css';
 
 export default function Bookcard({
-  id, 
-  title, 
-  author, 
-  category
+  id,
+  title,
+  author,
+  category,
 }) {
   const dispatch = useDispatch();
   const removeBookHandler = (e) => {

@@ -1,4 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .Book-card {
   display: grid;
   grid-template-columns: auto 300px 300px;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  margin: 18px;
+  padding: 28px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.Category {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.Title {
+  margin-top: -6px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.Author {
+  margin-top: -24px;
+  padding-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #92cfcf;
+}
+
+.Buttons {
+  margin-left: -8px;
+}
+
+.Buttons button {
+  border: none;
+  background-color: #fff;
+  color: #92cfcf;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.Remove-btn {
+  margin: 0 18px;
+  padding: 4px 14px;
+  border-left: 1px solid lightgray !important;
+  border-right: 1px solid lightgray !important;
+}
+
+.Current-cha {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: -12px;
+}
+
+.Update-btn {
+  text-transform: uppercase;
+  padding: 8px 26px;
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 2px;
+}
+
+.Reading-progress {
+  width: 100px;
+  height: 100px;
 }

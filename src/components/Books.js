@@ -20,6 +20,7 @@ export default function Books() {
             id={key}
             title={value[0].title}
             author={value[0].author}
+            category={value[0].category}
           />
         ))}
       <Form />

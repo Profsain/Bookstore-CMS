@@ -10,7 +10,7 @@ export default function Header() {
       <nav className="Navbar">
         <ul className="Nav-link">
           <li>
-            <Link to="/" className='active'>Books</Link>
+            <Link to="/" className="active">Books</Link>
           </li>
           <li>
             <Link to="/categories">Categories</Link>

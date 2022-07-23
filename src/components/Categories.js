@@ -1,13 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkBookStatus } from '../redux/categories/categories';
+import '../styles/Categories.css';
 
 export default function Categories() {
   const statusMsg = useSelector((state) => state.bookStatus);
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="Container">
       <button
         type="button"
         onClick={() => dispatch(checkBookStatus())}

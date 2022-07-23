@@ -29,7 +29,6 @@
 }
 
 a {
-  color: #0290ff !important;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 13px;
@@ -48,6 +47,6 @@ a:hover {
   margin-left: auto;
   padding: 10px 12px;
   color: #0290ff;
-  border: 1px solid lightgray;;
+  border: 1px solid lightgray;
   border-radius: 50%;
 }

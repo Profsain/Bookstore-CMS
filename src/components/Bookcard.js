@@ -5,7 +5,12 @@ import 'react-circular-progressbar/dist/styles.css';
 import deleteBookFromApi from '../redux/books/deleteBook';
 import '../styles/Bookcard.css';
 
-export default function Bookcard({ id, title, author, category }) {
+export default function Bookcard({
+  id, 
+  title, 
+  author, 
+  category
+}) {
   const dispatch = useDispatch();
   const removeBookHandler = (e) => {
     const bookId = e.target.id;
@@ -33,11 +38,11 @@ export default function Bookcard({ id, title, author, category }) {
         </div>
       </div>
       <div className="Reading-progress">
-      <CircularProgressbar value={percentage} text={`${percentage}%`} />;
+        <CircularProgressbar value={percentage} text={`${percentage}%`} />
       </div>
       <div className="Chapter-info">
         <p className="Current-cha">Current Chapter</p>
-        <p >Chapter 15</p>
+        <p>Chapter 15</p>
         <button className="Update-btn" type="button">Update Progress</button>
       </div>
     </div>
@@ -48,4 +53,5 @@ Bookcard.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };

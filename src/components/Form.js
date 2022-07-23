@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import generateUniqueId from 'generate-unique-id';
 import addNewBookToApi from '../redux/books/addNewBookToApi';
+import '../styles/Form.css';
 
 export default function Form() {
   const dispatch = useDispatch();
@@ -37,7 +38,7 @@ export default function Form() {
   };
 
   return (
-    <div className="Form-container">
+    <div className="Form">
       <h2>Add New Book</h2>
       <form>
         <input

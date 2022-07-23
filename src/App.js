@@ -6,13 +6,16 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <BrowserRouter>
+    <div className='App'>
+      <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </BrowserRouter>
+    </div>
+    
   );
 }
 
